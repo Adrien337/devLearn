@@ -1,0 +1,98 @@
+@use "../abstracts" as *;
+
+/*ils nous recommandent*/ 
+#recommandent div article {
+    @include card();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $bg;
+    padding: 3vh;
+    padding-top: 7vh;
+    margin-top: 5vh;
+    box-shadow: 0 8px 8px 0 $orange-shadow;
+
+    img {
+        height: 12vh;
+        width: 12vw;
+        display: flex;
+        position: absolute;
+        align-self: center;
+        padding-bottom: 25vh;
+    }
+
+    p:last-child {
+        text-align: end;
+    }
+}
+
+/*section 3*/
+#section3 article {
+    @include card();
+    box-shadow: 0 8px 8px 8px $white;
+    padding: 10px;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+
+        p {
+            max-width: 70%;
+        }
+
+        img {
+            height: 12vh;
+            width: 12vh;
+            border-radius: 20px;
+        }
+    }
+
+    button {
+        display: flex;
+        justify-self: flex-end;
+    }
+}
+
+@include max-width($bp-tablet) {
+    #recommandent div article img {
+        padding-bottom: 33vh;
+    }
+}
+
+@include max-width($bp-mobile) {
+    #recommandent div article img {
+        position: relative;
+        padding-bottom: 5vh;
+    }
+
+    #section3 article div {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            align-self: center;
+            padding-bottom: 5px;
+        }
+    }
+}
+
+@include max-width($bp-small) {
+    #recommandent div article img {
+        position: relative;
+        padding-bottom: 5vh;
+        height: 15vw;
+        width: 15vw;
+    }
+
+    #section3 article div {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            align-self: center;
+            padding-bottom: 5px;
+        }
+    }
+}

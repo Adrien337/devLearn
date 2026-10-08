@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.laptop-svg {
+    position: relative;
+    height: 60vh;
+    width: 60vh;
+}
+
+.laptop-png {
+    position: absolute;
+    top: 0;
+    left: 55%;
+    z-index: 1;
+    height: 60vh;
+    width: 60vh;
+}
+
+@include max-width($bp-mobile) {
+    .laptop-svg,
+    .laptop-png {
+        height: 30vh;
+        width: 30vh;
+    }
+}
+
+@include max-width($bp-small) {
+    .laptop-svg,
+    .laptop-png {
+        display: none;
+    }
+}

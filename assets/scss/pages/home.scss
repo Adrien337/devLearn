@@ -1,0 +1,172 @@
+@use "../abstracts" as *;
+
+main {
+    background-color: $ui-bg;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    border-bottom-left-radius: 20px;
+    padding: 10px;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        color: $primary;
+        padding-left: 3vw;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        button {
+            display: flex;
+            align-self: start;
+        }
+    }
+}
+
+#avec_nous {
+    div {
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        margin: 10vh;
+        border-radius: 20px;
+        box-shadow: 8px 8px 80px 8px $white;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            box-shadow: none;
+            align-items: start;
+        }
+
+        img {
+            height: 30vh;
+            width: 30vw;
+            display: flex;
+            align-self: center;
+        }
+    }
+}
+
+#recommandent {
+    background-color: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5vh 10vh;
+    border-radius: 20px;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 4vh;
+        font-size: 50px;
+        padding: 2vh 0;
+        margin-bottom: 5vh;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10vh;
+    }
+}
+
+#section3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 11vh;
+    padding: 3vh 10vh;
+    justify-content: stretch;
+
+    h2 {
+        padding: 1rem;
+    }
+}
+
+@include max-width($bp-tablet) {
+    main {
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    #avec_nous div {
+        padding: 10px;
+
+        img {
+            height: 20vh;
+            width: auto;
+        }
+    }
+}
+
+@include max-width($bp-mobile) {
+    main {
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+    }
+
+    #avec_nous div img {
+        display: none;
+    }
+
+    #recommandent div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@include max-width($bp-small) {
+    main {
+        align-items: center;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        div {
+            min-height: 30vh;
+            max-height: 40vh;
+        }
+    }
+
+    #avec_nous div {
+        align-items: center;
+        padding: 0;
+        margin: 10px;
+
+        img {
+            display: none;
+        }
+    }
+
+    #recommandent div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #section3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

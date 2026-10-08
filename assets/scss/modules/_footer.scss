@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+footer {
+    background-color: $ui-bg;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top-right-radius: 20px;
+
+    img {
+        height: 60vh;
+        width: 60vw;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@mixin max-width($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin card {
+    border-radius: 20px;
+}

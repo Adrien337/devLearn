@@ -1,0 +1,18 @@
+$primary: #ff5a00;
+$ui-bg: #303030;
+$secondary-bg: #eceff4;
+$bg: #e0e0e0;
+$white: #ffffff;
+$black: #000000;
+$orange-shadow: rgba(255, 144, 40, 0.611);
+
+$bp-tablet: 1025px;
+$bp-mobile: 769px;
+$bp-small: 481px;
+
+:root {
+    --primary: #{$primary};
+    --uiBg: #{$ui-bg};
+    --secondaryBg: #{$secondary-bg};
+    --bg: #{$bg};
+}

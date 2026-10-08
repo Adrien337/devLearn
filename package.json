@@ -1,0 +1,24 @@
+{
+  "name": "devlearn",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000d\u0000e\u0000v\u0000_\u0000L\u0000e\u0000a\u0000r\u0000n\u0000\r\u0000 \u0000",
+  "homepage": "https://github.com/Adrien337/dev_Learn#readme",
+  "bugs": {
+    "url": "https://github.com/Adrien337/dev_Learn/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adrien337/dev_Learn.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch assets/scss:assets/css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1"
+  }
+}
